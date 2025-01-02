@@ -1,9 +1,13 @@
+html, body {
+    height: 100%; /* Garantir que a altura da página ocupe 100% da tela */
+    margin: 0; /* Remover margens padrão */
+    overflow: hidden; /* Impedir a barra de rolagem */
+}
+
 body {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
-
     background-color: #FF6EB4;
 }
 
@@ -12,19 +16,22 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-
-    height: 600px;
-    width: 600px;
-
+    height: 60vh;  /* Definindo altura relativa */
+    width: 80vw;   /* Definindo largura relativa */
+    max-width: 600px; /* Definir largura máxima para não ficar muito grande em telas grandes */
+    max-height: 600px; /* Definir altura máxima */
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.2);
+    overflow: hidden; /* Garantir que a card não cause rolagem */
+    padding: 20px; /* Adicionando algum padding interno */
 }
 
 .card > .question p {
-    font-size: 32px;
+    font-size: 4vw; /* Tamanho da fonte adaptável */
     font-family: sans-serif;
     font-weight: 600;
+    text-align: center;
 }
 
 .buttons {
@@ -32,17 +39,18 @@ body {
     align-items: center;
     justify-content: center;
     gap: 16px;
+    flex-wrap: wrap; /* Permitir que os botões se ajustem quando necessário */
 }
 
 .btn-yes, .btn-no {
     height: 48px;
     width: 100px;
-
     border: none;
     border-radius: 8px;
     font-size: 16px;
     font-weight: bold;
     cursor: pointer;
+    transition: transform 0.3s ease;
 }
 
 .btn-yes {
@@ -59,9 +67,57 @@ body {
 }
 
 .answer > p {
-    font-size: 48px;
+    font-size: 6vw; /* Tamanho da fonte adaptável para a resposta */
     font-family: sans-serif;
     font-weight: bold;
     color: #FF6EB4;
     text-shadow: 1px 1px #000;
+    text-align: center;
+}
+
+/* Media Queries para ajustar o layout em telas menores */
+@media (max-width: 768px) {
+    .card {
+        height: 70vh;
+        width: 90vw;
+        max-width: 500px;
+        max-height: 500px;
+    }
+
+    .card > .question p {
+        font-size: 5vw; /* Ajustando o tamanho da fonte para telas menores */
+    }
+
+    .btn-yes, .btn-no {
+        height: 40px;
+        width: 80px;
+        font-size: 14px; /* Ajuste da fonte dos botões */
+    }
+
+    .answer > p {
+        font-size: 8vw; /* Ajuste da fonte da resposta */
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        height: 75vh;
+        width: 90vw;
+        max-width: 400px;
+        max-height: 400px;
+    }
+
+    .card > .question p {
+        font-size: 6vw; /* Ajustando ainda mais a fonte */
+    }
+
+    .btn-yes, .btn-no {
+        height: 35px;
+        width: 70px;
+        font-size: 12px; /* Ajuste da fonte dos botões */
+    }
+
+    .answer > p {
+        font-size: 10vw; /* Ajuste da fonte da resposta */
+    }
 }
