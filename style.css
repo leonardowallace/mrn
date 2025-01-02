@@ -8,7 +8,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #FF6EB4;
+    background-color: #001F3D; /* Azul escuro */
 }
 
 .card {
@@ -18,19 +18,20 @@ body {
     flex-direction: column;
     height: 60vh;  /* Definindo altura relativa */
     width: 80vw;   /* Definindo largura relativa */
-    max-width: 600px; /* Definir largura máxima para não ficar muito grande em telas grandes */
-    max-height: 600px; /* Definir altura máxima */
-    background-color: #fff;
+    max-width: 600px; /* Largura máxima */
+    max-height: 600px; /* Altura máxima */
+    background-color: #000000; /* Azul mais claro para o cartão */
     border-radius: 8px;
-    box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.2);
-    overflow: hidden; /* Garantir que a card não cause rolagem */
-    padding: 20px; /* Adicionando algum padding interno */
+    box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.5); /* Sombra preta mais intensa */
+    overflow: hidden;
+    padding: 20px;
 }
 
 .card > .question p {
     font-size: 4vw; /* Tamanho da fonte adaptável */
     font-family: sans-serif;
     font-weight: 600;
+    color: #FFFFFF; /* Texto branco */
     text-align: center;
 }
 
@@ -39,7 +40,7 @@ body {
     align-items: center;
     justify-content: center;
     gap: 16px;
-    flex-wrap: wrap; /* Permitir que os botões se ajustem quando necessário */
+    flex-wrap: wrap;
 }
 
 .btn-yes, .btn-no {
@@ -54,12 +55,13 @@ body {
 }
 
 .btn-yes {
-    background-color: #9AFF9A;
+    background-color: #3B7DFF; /* Azul claro para o botão 'Sim' */
+    color: #FFFFFF; /* Texto branco no botão 'Sim' */
 }
 
 .btn-no {
-    background-color: #FF4040;
-    color: #fff;
+    background-color: #FF4040; /* Vermelho para o botão 'Não' */
+    color: #FFFFFF; /* Texto branco no botão 'Não' */
 }
 
 .answer {
@@ -70,8 +72,8 @@ body {
     font-size: 6vw; /* Tamanho da fonte adaptável para a resposta */
     font-family: sans-serif;
     font-weight: bold;
-    color: #FF6EB4;
-    text-shadow: 1px 1px #000;
+    color: #FF4040; /* Vermelho para o texto de resposta */
+    text-shadow: 1px 1px #000; /* Sombra preta para o texto */
     text-align: center;
 }
 
@@ -85,17 +87,17 @@ body {
     }
 
     .card > .question p {
-        font-size: 5vw; /* Ajustando o tamanho da fonte para telas menores */
+        font-size: 5vw;
     }
 
     .btn-yes, .btn-no {
         height: 40px;
         width: 80px;
-        font-size: 14px; /* Ajuste da fonte dos botões */
+        font-size: 14px;
     }
 
     .answer > p {
-        font-size: 8vw; /* Ajuste da fonte da resposta */
+        font-size: 8vw;
     }
 }
 
@@ -108,16 +110,16 @@ body {
     }
 
     .card > .question p {
-        font-size: 6vw; /* Ajustando ainda mais a fonte */
+        font-size: 6vw;
     }
 
     .btn-yes, .btn-no {
         height: 35px;
         width: 70px;
-        font-size: 12px; /* Ajuste da fonte dos botões */
+        font-size: 12px;
     }
 
     .answer > p {
-        font-size: 10vw; /* Ajuste da fonte da resposta */
+        font-size: 10vw;
     }
 }
