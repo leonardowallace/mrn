@@ -3,7 +3,7 @@ let card = document.getElementById("card");
 // Exibir o vídeo caso seja selecionado o 'sim'
 document.querySelector("#yes").addEventListener("click", function () {
   // URL do vídeo que você deseja redirecionar
-  let videoUrl = "https://www.youtube.com/watch?v=dQw4w9WgXcQ"; // Exemplo: link de um vídeo no YouTube
+  let videoUrl = "https://www.youtube.com/watch?v=jwlB7anSd64"; // Exemplo: link de um vídeo no YouTube
   
   // Abrir o vídeo em uma nova aba
   window.open(videoUrl, "_blank");
